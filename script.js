@@ -1,4 +1,4 @@
-let container = document.getElementsByClassName("container");
+let container = document.querySelector(".container");
 
 let size = 16;
 for (let i = 0; i < size; i++) {
@@ -12,5 +12,3 @@ for (let i = 0; i < size; i++) {
     }
     container.appendChild(row);
 }
-
-container.appendChild(div);
