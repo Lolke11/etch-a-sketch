@@ -1,0 +1,23 @@
+body {
+    background-color: silver;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+.column {
+    flex: 1;
+}
+
+.row {
+    text-align: center;
+}
