@@ -7,15 +7,19 @@ for (let i = 0; i < size; i++) {
     for (let j = 1; j <= size; j++) {
         let row = document.createElement("div");
         row.className = "row";
-        row.textContent = (i * size) + j;
         column.appendChild(row);
     }
     container.appendChild(column);
 }
 
+let color = "#000000";
+function ChangeColor() {
+    color = document.querySelector("#colorpicker").value;
+}
+
 let rows = document.querySelectorAll(".row");
 for (let i = 0; i < rows.length; i++) {
-    rows[i].addEventListener("click", function() {
-        rows[i].textContent = "click";
+    rows[i].addEventListener("mouseover", function() {
+        rows[i].style.backgroundColor = color;
     })
 }
