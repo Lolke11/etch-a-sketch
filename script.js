@@ -12,3 +12,10 @@ for (let i = 0; i < size; i++) {
     }
     container.appendChild(column);
 }
+
+let rows = document.querySelectorAll(".row");
+for (let i = 0; i < rows.length; i++) {
+    rows[i].addEventListener("click", function() {
+        rows[i].textContent = "click";
+    })
+}
