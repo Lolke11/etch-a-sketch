@@ -22,11 +22,7 @@ pickedSize.addEventListener("input", function () {
     gridSize.textContent = s + "x" + s;
 })
 
-pickedSize.addEventListener("change", function () {
-    while (container.firstChild) {
-        container.removeChild(container.lastChild);
-    }
-
+function MakeGrid() {
     let size = pickedSize.value;
     for (let i = 0; i < size; i++) {
         let column = document.createElement("div");
@@ -38,4 +34,15 @@ pickedSize.addEventListener("change", function () {
         }
         container.appendChild(column);
     }
+}
+
+// creates grid first time site is loaded
+MakeGrid();
+
+pickedSize.addEventListener("change", function () {
+    while (container.firstChild) {
+        container.removeChild(container.lastChild);
+    }
+
+    MakeGrid();
 })
