@@ -17,11 +17,17 @@ container.addEventListener("mouseover", function () {
 let gridSize = document.querySelector("#sizeValue");
 let pickedSize = document.querySelector("#sizeSlider");
 
-pickedSize.addEventListener("change", function () {
+pickedSize.addEventListener("input", function () {
     let s = pickedSize.value;
     gridSize.textContent = s + "x" + s;
+})
 
-    let size = s;
+pickedSize.addEventListener("change", function () {
+    while (container.firstChild) {
+        container.removeChild(container.lastChild);
+    }
+
+    let size = pickedSize.value;
     for (let i = 0; i < size; i++) {
         let column = document.createElement("div");
         column.className = "column";
