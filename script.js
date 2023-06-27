@@ -8,7 +8,7 @@ function ChangeColor() {
 container.addEventListener("mouseover", function () {
     let rows = document.querySelectorAll(".row");
     for (let i = 0; i < rows.length; i++) {
-        rows[i].addEventListener("mouseover", function() {
+        rows[i].addEventListener("mouseenter", function() {
             rows[i].style.backgroundColor = color;
         })
     }
